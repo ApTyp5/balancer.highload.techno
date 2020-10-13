@@ -31,6 +31,8 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Real-IP $remote_addr;
+            
+            proxy_read_timeout 500ms;
 
             proxy_next_upstream http_500 http_503;
             proxy_next_upstream_timeout 1s;	

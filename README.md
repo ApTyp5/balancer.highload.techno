@@ -33,7 +33,8 @@ http {
             proxy_set_header X-Real-IP $remote_addr;
 
             proxy_next_upstream http_500 http_503;
-            proxy_next_upstream_timeout 1s;
+            proxy_next_upstream_timeout 1s;	
+            proxy_connect_timeout 60s;
         }
     }
 }

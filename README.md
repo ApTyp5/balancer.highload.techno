@@ -17,9 +17,9 @@ events {
 
 http {
     upstream balance {
-        server 35.228.60.241 fail_timeout=60s max_fails=60;
-        server 35.228.93.31 fail_timeout=60s max_fails=60;
-        server 35.228.123.165 fail_timeout=60s max_fails=60;
+        server 35.228.60.241 fail_timeout=1s max_fails=100;
+        server 35.228.93.31 fail_timeout=1s max_fails=100;
+        server 35.228.123.165 fail_timeout=1s max_fails=100;
     }
 
     server {

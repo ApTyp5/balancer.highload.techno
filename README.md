@@ -38,6 +38,10 @@ http {
             proxy_next_upstream_timeout 1s;	
             proxy_connect_timeout 60s;
         }
+        
+        gzip: on;
+        gzip_comp_level 4;
+        gzip_types text/plain text/css application/json application/x-javascript application/xml application/xml+rss text/javascript;
     }
 }
 ```
